@@ -1,0 +1,7 @@
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\bin\Debug\Tema_Ianuarie.exe.config
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\bin\Debug\Tema_Ianuarie.exe
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\bin\Debug\Tema_Ianuarie.pdb
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\obj\Debug\Tema_Ianuarie.csproj.AssemblyReference.cache
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\obj\Debug\Tema_Ianuarie.csproj.CoreCompileInputs.cache
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\obj\Debug\Tema_Ianuarie.exe
+D:\Drive\OneDrive\Documente\GitHub\Facultate\tema_ianuarie\Tema_Ianuarie\Tema_Ianuarie\obj\Debug\Tema_Ianuarie.pdb
