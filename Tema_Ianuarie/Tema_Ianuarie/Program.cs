@@ -10,7 +10,7 @@ namespace Tema_Ianuarie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Setul1.Problema19(593)); 
+            Console.WriteLine(Setul2.Problema4(5,8)); 
             Console.ReadKey();
         }
     }

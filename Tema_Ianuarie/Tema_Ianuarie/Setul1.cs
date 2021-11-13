@@ -210,6 +210,30 @@ namespace Tema_Ianuarie
                 return true;
         }
         
+        public static int Problema20(int n, int m)
+        {
+            return 0;
+        }
 
+        public static void Problema21()
+        {
+            Random m = new Random(1024);
+            int n = m.Next(0,1025);
+            for(int i=0;i<=4;i++)
+                Console.WriteLine(m.Next(0,1025));
+            Console.WriteLine(n);
+            int guess=0;
+            while(guess!=n)
+            {
+                Console.WriteLine("Ghiceste numarul:");
+                guess = int.Parse(Console.ReadLine());
+                if(guess>n)
+                    Console.WriteLine("Numarul secret este mai mic. Incearca din nou!");
+                if (guess < n)
+                    Console.WriteLine("Numarul secret este mai mare. Incearca din nou!");
+                if(guess == n)
+                    Console.WriteLine("Felicitari! Tocmai ai ghicit numarul secret!");
+            }
+        }
     }
 }
