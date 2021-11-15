@@ -143,14 +143,91 @@ namespace Tema_Ianuarie
 
         public static int Problema10(int n)
         {
-            int i, nr, maxi = 0;
+            int nr2, i, q, nr, maxi = 0;
+                nr = int.Parse(Console.ReadLine());
+            
+            for(i=1;i<n;i++)
+            {
+                q=1;
+                nr2= int.Parse(Console.ReadLine());
+                while (nr == nr2 &&  i<n)
+                {
+                    nr2= int.Parse(Console.ReadLine());
+                    q++;
+                    i++;
+                }
+                nr = nr2;
+                if (q > maxi)
+                    maxi = q;
+            }
+            return maxi;
+        }
+
+        public static int Problema11(int n)
+        {
+            int i, suma = 0;
             for(i=0;i<n;i++)
             {
-                nr = int.Parse(Console.ReadLine());
-                
-                while()
+                // Setul2.Problema11() returneaza oglinditul unui numar.
+                suma += Setul1.Problema11(Convert.ToInt32(Console.ReadLine()));
+            }
+            return suma;
+        }
+
+        public static int Problema12(int n)
+        {
+            int nr = 0;
+            string sir;
+            string[] sir_desp;
+            sir = Console.ReadLine();
+            sir_desp = sir.Split('0');
+            for (int i = 0; i < sir_desp.Length; i++)
+                if (sir_desp[i].Length > 2)
+                    nr++;
+            return nr;
+        }
+
+        public static bool Problema13(int n)
+        {
+            int i, m, p;
+            m = int.Parse(Console.ReadLine());
+            p = int.Parse(Console.ReadLine());
+            if (m < p)
+            {
+                for (i = 2; i < n; i++)
+                {
+                    m = p;
+                    p = int.Parse(Console.ReadLine());
+                    if (m > p)
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool Problema14(int n)
+        {
+            return 0;
+        }
+
+        public static bool Problema15(int n)
+        {
+            int i=2, nr, nr2;
+            nr = Convert.ToInt32(Console.ReadLine());
+            nr2 = Convert.ToInt32(Console.ReadLine());
+            if (nr > nr2)
+            {
+                while (nr >= nr2)
+                {
+                    nr = nr2;
+                    nr2 = Convert.ToInt32(Console.ReadLine());
+                    i++;
+                }
+                while(nr<=nr2)
             }
         }
+
+
     }
 
 }
