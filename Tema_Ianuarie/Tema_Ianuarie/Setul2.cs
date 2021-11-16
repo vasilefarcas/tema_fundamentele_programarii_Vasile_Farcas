@@ -205,7 +205,7 @@ namespace Tema_Ianuarie
             return true;
         }
 
-        public static bool Problema14(int n)
+        public static int Problema14(int n)
         {
             return 0;
         }
@@ -217,14 +217,44 @@ namespace Tema_Ianuarie
             nr2 = Convert.ToInt32(Console.ReadLine());
             if (nr > nr2)
             {
-                while (nr >= nr2)
+                while (nr >= nr2 && i<=n)
                 {
                     nr = nr2;
                     nr2 = Convert.ToInt32(Console.ReadLine());
                     i++;
                 }
-                while(nr<=nr2)
+                if (i == n)
+                    return false;
+                while(nr<=nr2 && i<=n)
+                {
+                    nr = nr2;
+                    nr2 = Convert.ToInt32(Console.ReadLine());
+                    i++;
+                }
+                if (i < n)
+                    return false;
             }
+            if (nr < nr2)
+            {
+                while (nr <= nr2 && i <= n)
+                {
+                    nr = nr2;
+                    nr2 = Convert.ToInt32(Console.ReadLine());
+                    i++;
+                }
+                if (i == n)
+                    return false;
+                while (nr >= nr2 && i <= n)
+                {
+                    nr = nr2;
+                    nr2 = Convert.ToInt32(Console.ReadLine());
+                    i++;
+                }
+                if (i < n)
+                    return false;
+            }
+
+            return true;
         }
 
 
