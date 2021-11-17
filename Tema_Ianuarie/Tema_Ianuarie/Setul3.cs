@@ -81,5 +81,66 @@ namespace Tema_Ianuarie
             return -1;
         }
 
+        public static void Problema11(int n)
+        {
+            int q;
+            int[] v = new int[n+1];
+            for (int i = 1; i <= n; i++)
+                v[i] = 1;
+            for(int i=2;i<=n;i++)
+            {
+                if(v[i]==1)
+                {
+                    q = i;
+                    q = q + i;
+                    while(q<=n)
+                    {
+                        v[q] = 0;
+                        q = q + i;
+                    }
+                }
+            }
+              
+            for(int i=1;i<=n;i++)
+                if(v[i]==1)
+                    Console.WriteLine(i);
+        }
+
+        public static void Problema12(int n, ref int[] v)
+        {
+            int i, j,min,aux,poz;
+            for(i=0;i<n-1;i++)
+            {
+                min = v[i + 1];
+                poz = i + 1;
+                for(j=i;j<n;j++)
+                {
+                    if (v[j] < min)
+                    {
+                        min = v[j];
+                        poz = j;
+                    }
+                }
+                aux = v[poz];
+                v[poz] = v[i];
+                v[i] = aux;
+            }
+        }
+
+        public static void Problema13(int n, ref int[] v)
+        {
+            int i, j, k, aux;
+            for (i = 1; i < n; i++)
+            {
+                j = 1;
+                while (v[i - j] > v[i] && i-j>0)
+                    j++;
+                aux = v[i];
+                for (k = i - 1; k >= j; k--)
+                    v[k - 1] = v[k];
+                v[i] = aux;
+            }
+        }
+
     }
 }

@@ -10,13 +10,13 @@ namespace Tema_Ianuarie
     {
         static void Main(string[] args)
         {
-            int[] v = { 0, 1, 2, 3, 4, 6, 7, 8, 9, 10 };
-            for(int i=0;i<=9;i++)
-            Console.Write(v[i]+" ");
+            int[] v = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            for (int i = 0; i < v.Length; i++) 
+                Console.Write(v[i]+" ");
+            Setul3.Problema13(v.Length,ref v);
             Console.WriteLine();
-            Console.WriteLine(Setul3.Problema10(10, 9, v));
-            for(int i=0;i<=9;i++)
-            Console.Write(v[i]+" ");
+            for (int i = 0; i < v.Length; i++) 
+                Console.Write(v[i] + " ");
             Console.ReadKey();
         }
     }
