@@ -10,14 +10,16 @@ namespace Tema_Ianuarie
     {
         static void Main(string[] args)
         {
-            int[] v = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            int[] v = { 0,0,0,0,0,0,0,0, 10, 0, 9, 8, 7, 0, 6, 5, 4, 3, 2, 1, 0 };
+            int n = v.Length;
             for (int i = 0; i < v.Length; i++) 
                 Console.Write(v[i]+" ");
-            Setul3.Problema13(v.Length,ref v);
+            Setul3.Problema16(ref n ,ref v);
             Console.WriteLine();
             for (int i = 0; i < v.Length; i++) 
                 Console.Write(v[i] + " ");
             Console.ReadKey();
+            
         }
     }
 }

@@ -129,18 +129,56 @@ namespace Tema_Ianuarie
 
         public static void Problema13(int n, ref int[] v)
         {
-            int i, j, k, aux;
+            int i, j, aux;
             for (i = 1; i < n; i++)
             {
-                j = 1;
-                while (v[i - j] > v[i] && i-j>0)
-                    j++;
                 aux = v[i];
-                for (k = i - 1; k >= j; k--)
-                    v[k - 1] = v[k];
-                v[i] = aux;
+                j = i - 1;
+                while(j>=0 && v[j]>aux)
+                {
+                    v[j + 1] = v[j];
+                    j = j - 1;
+                }
+                v[j + 1] = aux;
             }
         }
 
+        public static void Problema14(int n, ref int[] v)
+        {
+            int q = n - 1, i, k, aux;
+            for (i = 0; i < n && q>i; i++)
+                if (v[i] == 0)
+                {
+                    Swap(ref v[i], ref v[q]);
+                    q--;
+                }
+        }
+
+        public static void Swap(ref int a, ref int b)
+        {
+            a = a + b;
+            b = a - b;
+            a = a - b;
+        }
+
+        public static void Problema16(ref int n, ref int[] v)
+        {
+            int i, aux,q,j;
+            for(i=0;i<n-1;i++)
+            {
+                for (j = i + 1; j < n; j++)
+                    if (v[j] == v[i])
+                    {
+                        q = j;
+                        while (q < n-1)
+                        {
+                            v[q] = v[q + 1];
+                            q++;
+                        }
+                        Array.Resize(ref v, n - 1);
+                        n--;
+                    }
+            }
+        }
     }
 }
