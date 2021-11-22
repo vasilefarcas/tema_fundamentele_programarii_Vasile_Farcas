@@ -161,7 +161,7 @@ namespace Tema_Ianuarie
             a = a - b;
         }
 
-        public static void Problema16(ref int n, ref int[] v)
+        public static void Problema15(ref int n, ref int[] v)
         {
             int i, aux,q,j;
             for(i=0;i<n-1;i++)
@@ -169,16 +169,18 @@ namespace Tema_Ianuarie
                 for (j = i + 1; j < n; j++)
                     if (v[j] == v[i])
                     {
-                        q = j;
-                        while (q < n-1)
-                        {
+                        for(q=j; q < n-1;q++)
                             v[q] = v[q + 1];
-                            q++;
-                        }
+                        j--;
                         Array.Resize(ref v, n - 1);
                         n--;
                     }
             }
+        }
+
+        public static void Problema16(int n, int[] v)
+        {
+
         }
     }
 }
