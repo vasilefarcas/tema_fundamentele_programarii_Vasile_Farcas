@@ -178,9 +178,32 @@ namespace Tema_Ianuarie
             }
         }
 
-        public static void Problema16(int n, int[] v)
+        public static int Problema16(int n, int[] v)
         {
-
+            int i=1, cmmdc = v[0];
+            for(; i<n;i++)
+            {
+                cmmdc = Setul1.Problema17(cmmdc, v[i]);  // Problema17 din setul1 calculeaza cmmdc 
+            }
+            return cmmdc;
         }
+
+        public static void Problema17(int n, int b)
+        {
+            char[] v = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+            char[] s=new char[33];
+            int i = 0;
+            while (n != 0)
+            {
+                i++;
+                Array.Resize(ref s, i+1);
+                s[i]=Convert.ToChar(v[n%b]);
+                n /= b;
+            }
+            Array.Reverse(s);
+            Console.WriteLine(s);
+        }
+
+
     }
 }
