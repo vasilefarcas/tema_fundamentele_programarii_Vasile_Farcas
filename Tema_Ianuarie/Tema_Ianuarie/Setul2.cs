@@ -64,8 +64,8 @@ namespace Tema_Ianuarie
 
         public static int Problema5(int n)
         {
-            int nr = 0,i,m;
-            for(i=0;i<n;i++)
+            int nr = 0, i, m;
+            for (i = 0; i < n; i++)
             {
                 m = int.Parse(Console.ReadLine());
                 if (m == i)
@@ -78,7 +78,7 @@ namespace Tema_Ianuarie
         {
             int m, p, q, i;
             bool ok = true;
-            for(i=0;i<n;i++)
+            for (i = 0; i < n; i++)
             {
                 m = int.Parse(Console.ReadLine());
 
@@ -88,8 +88,8 @@ namespace Tema_Ianuarie
 
         public static string Problema7(int n)
         {
-            int i,m, min = 32000, max = 32000;
-            for(i=0;i<n;i++)
+            int i, m, min = 32000, max = 32000;
+            for (i = 0; i < n; i++)
             {
                 m = int.Parse(Console.ReadLine());
                 if (m < min)
@@ -102,8 +102,8 @@ namespace Tema_Ianuarie
 
         public static int Problema8(int n)
         {
-            int aux, f=1, i, f1 = 1, f2 = 0,f3;
-            for(i=0;i<n-1;i++)
+            int aux, f = 1, i, f1 = 1, f2 = 0, f3;
+            for (i = 0; i < n - 1; i++)
             {
                 f3 = f + f1;
                 f2 = f1;
@@ -115,20 +115,20 @@ namespace Tema_Ianuarie
 
         public static bool Problema9(int n)
         {
-            int i,m,p;
+            int i, m, p;
             m = int.Parse(Console.ReadLine());
             p = int.Parse(Console.ReadLine());
-            if(m>p)
+            if (m > p)
             {
-                for(i=2;i<n;i++)
+                for (i = 2; i < n; i++)
                 {
-                m = p;
-                p = int.Parse(Console.ReadLine());
+                    m = p;
+                    p = int.Parse(Console.ReadLine());
                     if (m < p)
                         return false;
                 }
             }
-            if(m<p)
+            if (m < p)
             {
                 for (i = 2; i < n; i++)
                 {
@@ -144,15 +144,15 @@ namespace Tema_Ianuarie
         public static int Problema10(int n)
         {
             int nr2, i, q, nr, maxi = 0;
-                nr = int.Parse(Console.ReadLine());
-            
-            for(i=1;i<n;i++)
+            nr = int.Parse(Console.ReadLine());
+
+            for (i = 1; i < n; i++)
             {
-                q=1;
-                nr2= int.Parse(Console.ReadLine());
-                while (nr == nr2 &&  i<n)
+                q = 1;
+                nr2 = int.Parse(Console.ReadLine());
+                while (nr == nr2 && i < n)
                 {
-                    nr2= int.Parse(Console.ReadLine());
+                    nr2 = int.Parse(Console.ReadLine());
                     q++;
                     i++;
                 }
@@ -166,7 +166,7 @@ namespace Tema_Ianuarie
         public static int Problema11(int n)
         {
             int i, suma = 0;
-            for(i=0;i<n;i++)
+            for (i = 0; i < n; i++)
             {
                 // Setul2.Problema11() returneaza oglinditul unui numar.
                 suma += Setul1.Problema11(Convert.ToInt32(Console.ReadLine()));
@@ -212,12 +212,12 @@ namespace Tema_Ianuarie
 
         public static bool Problema15(int n)
         {
-            int i=2, nr, nr2;
+            int i = 2, nr, nr2;
             nr = Convert.ToInt32(Console.ReadLine());
             nr2 = Convert.ToInt32(Console.ReadLine());
             if (nr > nr2)
             {
-                while (nr >= nr2 && i<=n)
+                while (nr >= nr2 && i <= n)
                 {
                     nr = nr2;
                     nr2 = Convert.ToInt32(Console.ReadLine());
@@ -225,7 +225,7 @@ namespace Tema_Ianuarie
                 }
                 if (i == n)
                     return false;
-                while(nr<=nr2 && i<=n)
+                while (nr <= nr2 && i <= n)
                 {
                     nr = nr2;
                     nr2 = Convert.ToInt32(Console.ReadLine());

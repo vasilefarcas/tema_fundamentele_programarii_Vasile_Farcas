@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Tema_Ianuarie
@@ -169,25 +170,25 @@ namespace Tema_Ianuarie
             }
             return a;
         }
-        
+
         // descompunere in factori primi
         public static void Problema18(int n)
         {
             int d = 2, nr = 0;
-            while(n!=0)
+            while (n != 0)
             {
-                if(n%d==0)
-                { 
+                if (n % d == 0)
+                {
                     nr = 0;
-                    while(n%d==0)
+                    while (n % d == 0)
                     {
                         n /= d;
                         nr++;
                     }
-                if(n>1)
-                Console.Write("" + d + '^' + nr+" x ");
-                else
-                Console.Write("" + d + '^' + nr);
+                    if (n > 1)
+                        Console.Write("" + d + '^' + nr + " x ");
+                    else
+                        Console.Write("" + d + '^' + nr);
 
                 }
                 d++;
@@ -207,9 +208,9 @@ namespace Tema_Ianuarie
                     return false;
                 n /= 10;
             }
-                return true;
+            return true;
         }
-        
+
         public static int Problema20(int n, int m)
         {
             return 0;
@@ -218,22 +219,22 @@ namespace Tema_Ianuarie
         public static void Problema21()
         {
             Random m = new Random(1024);
-            int n = m.Next(0,1025);
-            for(int i=0;i<=4;i++)
-                Console.WriteLine(m.Next(0,1025));
+            int n = m.Next(1024);
             Console.WriteLine(n);
-            int guess=0;
-            while(guess!=n)
+            int guess = 0;
+            while (guess != n)
             {
                 Console.WriteLine("Ghiceste numarul:");
                 guess = int.Parse(Console.ReadLine());
-                if(guess>n)
+                if (guess > n)
                     Console.WriteLine("Numarul secret este mai mic. Incearca din nou!");
                 if (guess < n)
                     Console.WriteLine("Numarul secret este mai mare. Incearca din nou!");
-                if(guess == n)
+                if (guess == n)
                     Console.WriteLine("Felicitari! Tocmai ai ghicit numarul secret!");
+
             }
+            Console.ReadKey();
         }
     }
 }
