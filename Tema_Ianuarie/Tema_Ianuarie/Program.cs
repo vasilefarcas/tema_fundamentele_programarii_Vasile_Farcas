@@ -10,7 +10,7 @@ namespace Tema_Ianuarie
     {
         static void Main(string[] args)
         {
-            // Metodele pentru rezolvarea problemelor se gasesc in clasele Setul1, Setul2 si Setul3 
+            // Metodele pentru rezolvarea problemelor se gasesc in clasele Setul1, Setul2 si Setul3
         }
     }
 }

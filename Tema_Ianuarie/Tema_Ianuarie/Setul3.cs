@@ -320,30 +320,33 @@ namespace Tema_Ianuarie
         {
             int l1 = a.Length, l2 = b.Length, i, j, ok = 0, lun = Math.Min(l1, l2);
             // Adunarea
-            char[] c = new char[l1 + l2];
+            char[] c = new char[Math.Max(l1, l2)+1];
             for (i = 0; i < lun; i++)
             {
-                c[i] = Convert.ToChar((a[i] + b[i]) + ok);
+                c[i] = Convert.ToChar(((a[i] + b[i]) + ok) % 10);
                 ok = 0;
                 if (a[i] + b[i] > 9)
                     ok = 1;
             }
             if (lun == l1)
-                while (i < Math.Max(l1, l2))
+                while (i < Math.Max(l1, l2)-1)
                 {
-                    c[i] = Convert.ToChar(b[i] + ok);
+                    c[i] = Convert.ToChar((b[i] + ok) % 10);
                     i++;
                 }
             else
                 if (lun == l2)
-                while (i < Math.Max(l1, l2))
+                while (i < Math.Max(l1, l2)-1)
                 {
-                    c[i] = Convert.ToChar(a[i] + ok);
+                    c[i] = Convert.ToChar((a[i] + ok) % 10);
                     i++;
                 }
-            Console.WriteLine(c);
             Array.Reverse(c);
-            Console.WriteLine(c);
+            i = 0;
+            while (Convert.ToInt32(c[i]) == 0)
+                i++;
+            for (; i < c.Length; i++)
+                Console.Write(Convert.ToInt32(c[i]));
 
         }
 
